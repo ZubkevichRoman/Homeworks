@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Книга</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .container { max-width: 720px; margin: 0 auto; }
+    header { margin-bottom: 24px; }
+    .card { border: 1px solid #ccc; border-radius: 8px; padding: 16px; }
+    .actions { display: flex; gap: 12px; margin-top: 16px; }
+    .btn { padding: 10px 14px; border-radius: 6px; border: 1px solid #555; text-decoration: none; }
+    .btn.primary { background: #1976d2; color: #fff; border: none; }
+    .muted { color: #666; font-size: 14px; }
+    footer { margin-top: 36px; color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Книга на сервере</h1>
+    <p class="muted">Эта страница отображается при переходе на /book.</p>
+  </header>
+
+  <section class="card">
+    <h2>“Тестовая книга”</h2>
+    <p>Описание: пример файла, который можно скачать с сервера.</p>
+    <ul>
+      <li><strong>Формат:</strong> TXT</li>
+      <li><strong>Размер:</strong> зависит от содержимого</li>
+      <li><strong>Расположение на сервере:</strong> WEB-INF/resources/book.txt</li>
+    </ul>
+
+    <div class="actions">
+      <a class="btn primary" href="/book?download=true">Скачать книгу</a>
+      <a class="btn" href="/load-book">Загрузить свою книгу</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Если загрузка не начинается, убедитесь, что серверный эндпоинт обрабатывает параметр download.</p>
+  </footer>
+</div>
+</body>
+</html>

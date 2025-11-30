@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>ServletMinsk</servlet-name>
-    <servlet-class>ServletTimeMinsk</servlet-class>
+    <servlet-class>HomeworkLesson24.ServletTimeMinsk</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletMinsk</servlet-name>

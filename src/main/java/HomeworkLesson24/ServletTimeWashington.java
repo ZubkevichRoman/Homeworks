@@ -1,3 +1,5 @@
+package HomeworkLesson24;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,13 +11,13 @@ import java.io.Writer;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-@WebServlet("/beijing")
-public class ServletTimeBeijing extends HttpServlet {
+@WebServlet("/washington")
+public class ServletTimeWashington extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Writer writer = resp.getWriter();
-        ZoneId beijingTime = ZoneId.of("-05:00");
-        ZonedDateTime zonedDateTime = ZonedDateTime.now(beijingTime);
+        ZoneId washingtonTime = ZoneId.of("America/New_York");
+        ZonedDateTime zonedDateTime = ZonedDateTime.now(washingtonTime);
         writer.write(zonedDateTime.toString());
         writer.close();
     }
